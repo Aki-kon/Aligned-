@@ -7,5 +7,6 @@
         <p class="lead">
             <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
         </p>
+        <p> hola amigos <p/>
       </div>
 <?php include("template/pie.php");?>
