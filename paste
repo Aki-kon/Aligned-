@@ -1,33 +1,51 @@
 <div class="col-md-3">
-<div class="card">
-    <img class="card-img-top" src="data:image/png;base64,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" alt="">
-    <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
+    <div class="card">
+        <img class="card-img-top" src="https://thumbs.dreamstime.com/b/estilo-plano-del-icono-libro-de-misterios-antiguo-ilustraci%C3%B3n-plana-viejo-vector-misterio-para-el-dise%C3%B1o-web-198556395.jpg" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Misterio</h4>
+            <a name="" id="" class="btn btn-primary" href="#" role="button">Ver mas</a>
+        </div>
+    </div>  
     </div>
-</div>  
-</div>
-<div class="card">
-    <img class="card-img-top" src="holder.js/100x180/" alt="">
-    <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
+    <div class="card">
+        <img class="card-img-top" src="https://thumbs.dreamstime.com/b/estilo-plano-del-icono-libro-de-misterios-antiguo-ilustraci%C3%B3n-plana-viejo-vector-misterio-para-el-dise%C3%B1o-web-198556395.jpg" width='300' height='300' alt="">
+        
+        <div class="card-body">
+            <h4 class="card-title">Misterio</h4>
+            <a name="" id="" class="btn btn-primary" href="#" role="button">Ver mas</a>
+        </div>
+    </div>  
     </div>
-</div>  
-</div>
-<div class="card">
-    <img class="card-img-top" src="holder.js/100x180/" alt="">
-    <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
+    <div class="card">
+        <img class="card-img-top" src="" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Misterio</h4>
+            <a name="" id="" class="btn btn-primary" href="#" role="button">Ver mas</a>
+        </div>
+    </div>  
     </div>
-</div>  
-</div>
-<div class="card">
-    <img class="card-img-top" src="holder.js/100x180/" alt="">
-    <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
+    <div class="card">
+        <img class="card-img-top" src="" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Misterio</h4>
+            <a name="" id="" class="btn btn-primary" href="#" role="button">Ver mas</a>
+        </div>
+    </div>  
     </div>
-</div>  
-</div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <ul class="nav navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">FUTURE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">INICIO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="libros.php">LIBROS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nosotros.php">NOSOTROS</a>
+            </li>
+        </ul>
+    </nav>
