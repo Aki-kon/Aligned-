@@ -1,3 +1,11 @@
+<?php
+if($_POST){
+  header('Location:inicio.php');
+
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,26 +20,27 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+          <div class="col-md-4">
+            
+          </div>
+            <div class="col-md-4"> 
+              <br/> <br/> <br/>        
                 <div class="card">
                     <div class="card-header">
                         LOGIN
                     </div>
-                    <form>
+
+                    <form method='POST'>
+
                     <div class = "form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
+                    <label>Usuario</label>
+                    <input type="text" class="form-control" name='usuario'  placeholder="Ingresa tu correo">
                     <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label for="exampleInputPassword1">Contraseña:</label>
+                    <input type="password" class="form-control" name='contraseña' placeholder="Ingresa tu contraseña">
                     </div>
                     <button type="submit" class="btn btn-primary">Sign In</button>
+
                     </form>
                     
                 </div>
