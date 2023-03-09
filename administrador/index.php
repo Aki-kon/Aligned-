@@ -27,19 +27,19 @@ if($_POST){
               <br/> <br/> <br/>        
                 <div class="card">
                     <div class="card-header">
-                        LOGIN
+                        Inicio de Sesión
                     </div>
 
-                    <form method='POST'>
+                    <form method="POST">
 
                     <div class = "form-group">
                     <label>Usuario</label>
-                    <input type="text" class="form-control" name='usuario'  placeholder="Ingresa tu correo">
+                    <input type="text" class="form-control" name='Correo Electronico' placeholder="Ingresa tu correo">
                     <div class="form-group">
                     <label for="exampleInputPassword1">Contraseña:</label>
                     <input type="password" class="form-control" name='contraseña' placeholder="Ingresa tu contraseña">
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign In</button>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
 
                     </form>
                     
