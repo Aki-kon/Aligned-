@@ -34,7 +34,7 @@
                     <label for="exampleInputPassword1">Contraseña:</label>
                     <input type="password" class="form-control" name='contraseña' placeholder="Ingresa tu contraseña">
                     </div>
-              <a name="" id="" class="btn btn-primary" href= "<?php echo $url;?>/administrador/inicio.php"> Inicio Sesion </a>
+               <a name="" id="" class="btn btn-primary" href= "<?php echo $url;?>/administrador/inicio.php"> Inicio Sesion </a>
                <a name="" id="" class="btn btn-primary" href="<?php echo $url;?>/administrador/seccion/registrar.php" role="button">Crear usuario</a>
 
                     </form>
