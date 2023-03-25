@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">INICIO
+          <a class="nav-link active" href="indexadmin.php">INICIO
             <span class="visually-hidden">(current)</span>
           </a>
         </li>

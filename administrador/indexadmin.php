@@ -1,34 +1,10 @@
 <?php
-include "conn.php";
-session_start();
-error_reporting(0);
+if($_POST){
+  header('Location:inicio.php');
 
-if(isset($_SESSION["usuario"])){
-  header("Location: inicio.php");
 }
 
-if(isset($_POST["Submit"])){
-  $email=$_POST["email"];
-  $contraseña=md5($_POST["contraseña"]);
-
-  $sql="SELECT * FROM sitio where email='$email' AND contraseña='$contraseña'";
-  $result =mysqli_query($conn, $sql);
-
-  if($result->num_rows>0){
-    $row=mysqli_fetch_assoc($result);
-    $_SESSION['usuario']=$row['usuario'];
-    header("Location: index.php");
-
-
-  }}
-  else{
-    echo"<script>alert('El correo o la contraseña son incorrectos')</script>;
-  }
-
-
 ?>
-
-<?php $url="http://".$_SERVER["HTTP_HOST"]."/FUTURE-SW"?>
 
 <!doctype html>
 <html lang="en">
@@ -54,7 +30,7 @@ if(isset($_POST["Submit"])){
                         Inicio de Sesión
                     </div>
 
-                    <form>
+                    <form method="POST">
 
                     <div class = "form-group">
                     <label>Usuario</label>
@@ -63,10 +39,8 @@ if(isset($_POST["Submit"])){
                     <label for="exampleInputPassword1">Contraseña:</label>
                     <input type="password" class="form-control" name='contraseña' placeholder="Ingresa tu contraseña">
                     </div>
-              <a name="" id="" class="btn btn-primary" href= "<?php echo $url;?>/administrador/inicio.php"> Inicio Sesion </a>
-               <a name="" id="" class="btn btn-primary" href="<?php echo $url;?>/administrador/seccion/registrar.php" role="button">Crear usuario</a>
-              
-               
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+
                     </form>
                     
                 </div>
