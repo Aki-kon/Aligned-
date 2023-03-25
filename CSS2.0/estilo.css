@@ -4,3 +4,7 @@ text-align: center;
 .color-fondo-nosotros{
 background-color: bisque;
 }
+.contenido{
+    display: block;
+    margin: 60px;
+}

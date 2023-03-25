@@ -1,12 +1,13 @@
 <?php include("template/cabecera.php");?>
-      <div class="jumbotron">
-        <h1 class="display-3">Bienvenidos</h1>
-        <p class="lead">Este es el futuro</p>
-        <hr class="my-2">
-        <p>More info</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-        </p>
-        <p> hola amigos <p/>
+<div class="jumbotron centrar-texto">
+        <h1 class="display-3 contenido">Bienvenidos</h1>
+        <br><br><br>
+    <div>
+    <h2>En este momento te encuentras en lo que nos gusta llamar el futuro.</h2>
+<p>Esta es nuestra biblioteca en linea donde ofrecemos un gran catalogo de libros de <a href="#">uso libre.</a></p>
+<p><small>Busca y renueva tus conociminetos con nosotros.</small></p>
+<p> Adelante <em> se libre de emprender una nueva aventura</em>.</p>
+    </div>
+    <div><img src="img/Logo_NPCS.png" alt=""></div>
       </div>
 <?php include("template/pie.php");?>
