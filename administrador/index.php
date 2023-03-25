@@ -1,5 +1,6 @@
 
 <?php $url="http://".$_SERVER["HTTP_HOST"]."/FUTURE-SW"?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,7 +25,7 @@
                         Inicio de Sesión
                     </div>
 
-                    <form method="POST">
+                    <form>
 
                     <div class = "form-group">
                     <label>Usuario</label>
@@ -33,7 +34,8 @@
                     <label for="exampleInputPassword1">Contraseña:</label>
                     <input type="password" class="form-control" name='contraseña' placeholder="Ingresa tu contraseña">
                     </div>
-               <a name="" id="" class="btn btn-primary" href="<?php echo $url;?>/administrador/seccion/registrar.php" role="button"></a>
+              <a name="" id="" class="btn btn-primary" href= "<?php echo $url;?>/administrador/inicio.php"> Inicio Sesion </a>
+               <a name="" id="" class="btn btn-primary" href="<?php echo $url;?>/administrador/seccion/registrar.php" role="button">Crear usuario</a>
 
                     </form>
                     
