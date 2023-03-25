@@ -1,11 +1,5 @@
-<?php
-if($_POST){
-  header('Location:inicio.php');
 
-}
-
-?>
-
+<?php $url="http://".$_SERVER["HTTP_HOST"]."/FUTURE-SW"?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -39,7 +33,7 @@ if($_POST){
                     <label for="exampleInputPassword1">Contraseña:</label>
                     <input type="password" class="form-control" name='contraseña' placeholder="Ingresa tu contraseña">
                     </div>
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+               <a name="" id="" class="btn btn-primary" href="<?php echo $url;?>/administrador/seccion/registrar.php" role="button"></a>
 
                     </form>
                     
