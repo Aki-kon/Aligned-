@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['usuario']))   {
-  header("Location:../indexadmin.php");
+  header("Location:../index.php");
 }
   else{
     if($_SESSION['usuario']=="ok"){

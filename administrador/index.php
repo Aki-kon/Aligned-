@@ -1,5 +1,5 @@
 <?php
-include "conn.php";
+/*include "conn.php";
 session_start();
 error_reporting(0);
 
@@ -25,7 +25,7 @@ if(isset($_POST["Submit"])){
     echo"<script>alert('El correo o la contraseña son incorrectos')</script>;
   }
 
-
+*/
 ?>
 
 <?php $url="http://".$_SERVER["HTTP_HOST"]."/FUTURE-SW"?>
