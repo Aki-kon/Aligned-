@@ -1,4 +1,11 @@
-<?php include("template/cabecera.php");?>
+<?php 
+session_start();
+
+if(isset($_SESSION['usuario'])){
+  header("Location: panel.php");
+}
+include("template/cabecera.php");
+?>
 <div class="jumbotron centrar-texto">
         <h1 class="display-3 contenido">Bienvenidos</h1>
         <br><br><br>

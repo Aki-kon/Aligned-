@@ -18,8 +18,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="administrador/index.php">Iniciar Sesion</a>
+        </li>
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">INICIO
+          <a class="nav-link active" href="panel.php">INICIO
             <span class="visually-hidden">(current)</span>
           </a>
         </li>

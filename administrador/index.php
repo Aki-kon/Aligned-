@@ -1,36 +1,41 @@
 <?php
-/*include "conn.php";
+include ("./config/conn.php");
 session_start();
 error_reporting(0);
 
 if(isset($_SESSION["usuario"])){
-  header("Location: inicio.php");
+  header("Location: index.php");
 }
 
-if(isset($_POST["Submit"])){
-  $email=$_POST["email"];
-  $contraseña=md5($_POST["contraseña"]);
 
-  $sql="SELECT * FROM sitio where email='$email' AND contraseña='$contraseña'";
-  $result =mysqli_query($conn, $sql);
+/*
+if(isset($_POST["iniciar"])){
+  header("Location: ../panel.php");
+}*/
+if(isset($_POST["iniciar"]))
+{
+    $email=$_POST["CorreoElectronico"];
+    $contraseña=md5($_POST["contraseña"]);
 
-  if($result->num_rows>0){
-    $row=mysqli_fetch_assoc($result);
-    $_SESSION['usuario']=$row['usuario'];
-    header("Location: index.php");
-
-
-  }}
-  else{
-    echo"<script>alert('El correo o la contraseña son incorrectos')</script>;
-  }
-
-*/
+    $SentenciaSQL="SELECT * FROM registro WHERE email='$email' AND contraseña='$contraseña'";
+    $resultado=mysqli_query($conexion,$SentenciaSQL);
+      if($resultado->num_rows > 0)
+      {
+        $row= mysqli_fetch_assoc($resultado);
+        $_SESSION['usuario']=$row['usuario'];
+        header("Location: ../panel.php");
+      }else
+        {
+        echo "<script>alert('La contraseña o el email son incorrectos')</script>";
+        }
+}
+if(isset($_POST["registrar"])){
+  header("Location: ./seccion/registrar.php");
+}
 ?>
 
-<?php $url="http://".$_SERVER["HTTP_HOST"]."/FUTURE-SW"?>
-
 <!doctype html>
+
 <html lang="en">
   <head>
     <title>Title</title>
@@ -54,19 +59,17 @@ if(isset($_POST["Submit"])){
                         Inicio de Sesión
                     </div>
 
-                    <form>
-
+                    <form method="post">
                     <div class = "form-group">
-                    <label>Usuario</label>
-                    <input type="text" class="form-control" name='Correo Electronico' placeholder="Ingresa tu correo">
+                    <label>Correo Electronico:</label>
+                    <input type="text" class="form-control" name='CorreoElectronico' placeholder="Ingresa tu correo">
                     <div class="form-group">
                     <label for="exampleInputPassword1">Contraseña:</label>
                     <input type="password" class="form-control" name='contraseña' placeholder="Ingresa tu contraseña">
+                    <p><input type="submit" name ="iniciar" value="Iniciar Sesión"></p>
+                    <p><input type="submit" name ="registrar" value="Registrar Usuario"></p>
+
                     </div>
-               <a name="" id="" class="btn btn-primary" href= "<?php echo $url;?>/administrador/inicio.php"> Inicio Sesion </a>
-               <a name="" id="" class="btn btn-primary" href="<?php echo $url;?>/administrador/seccion/registrar.php" role="button">Crear usuario</a>
-              
-               
                     </form>
                     
                 </div>
@@ -76,3 +79,5 @@ if(isset($_POST["Submit"])){
     </div>
   </body>
 </html>
+
+
