@@ -1,13 +1,23 @@
 <?php include("template/cabecera.php");?>
-<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-  <div class="card-header">CATEGORIAS</div>
-  <div class="card-body">
-    <p class="card-text">Lista de categorias de los libros que se encuentran en nuestro catalogo.</p>
+
+<?php
+include("administrador/config/bd.php");
+
+$SentenciaSQL= $conexion->prepare("SELECT * FROM libros");
+$SentenciaSQL->execute();
+$listaLibros=$SentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<?php foreach($listaLibros as $libro) { ?>
+<div class="col-md-2">
+  <div class="card">
+    <img class="card-img-top" src="./img/<?php echo $libro['ImagenLibro'];?>" alt="">
+
+     <div class= "card-body">
+        <h4 class="card-tittle"><?php echo $libro['NombreLibro'];?> </h4>
+        <a name="" id="" class="btn btn-primary" href="" role="button">Ver más </a>
+     </div>
   </div>
 </div>
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active">Ciencia</a>
-  <a href="#" class="list-group-item list-group-item-action">Matematicas</a>
-  <a href="#" class="list-group-item list-group-item-action ">Lenguajes de programacion</a>
-</div> 
+<?php } ?>
 <?php include("template/pie.php");?>
