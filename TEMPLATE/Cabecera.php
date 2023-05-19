@@ -22,7 +22,7 @@
           <a class="nav-link" href="administrador/index.php">Iniciar Sesion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="panel.php">INICIO
+          <a class="nav-link" href="panel.php">INICIO
           </a>
         </li>
         <li class="nav-item">

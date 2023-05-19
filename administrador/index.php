@@ -1,37 +1,19 @@
 <?php
 include ("./config/conn.php");
+include ("./controlador.php");
 session_start();
 error_reporting(0);
+$txtCorreoElectronico=(isset($_POST['txtCorreoElectronico']))?$_POST['txtCorreoElectronico']:"";
+$txtcontraseña=(isset($_POST['txtcontraseña']))?$_POST['txtcontraseña']:"";
+
 
 if(isset($_SESSION["usuario"])){
   header("Location: index.php");
 }
-
-
-/*
-if(isset($_POST["iniciar"])){
-  header("Location: ../panel.php");
-}*/
-if(isset($_POST["iniciar"]))
-{
-    $email=$_POST["CorreoElectronico"];
-    $contraseña=md5($_POST["contraseña"]);
-
-    $SentenciaSQL="SELECT * FROM registro WHERE email='$email' AND contraseña='$contraseña'";
-    $resultado=mysqli_query($conexion,$SentenciaSQL);
-      if($resultado->num_rows > 0)
-      {
-        $row= mysqli_fetch_assoc($resultado);
-        $_SESSION['usuario']=$row['usuario'];
-        header("Location: ../panel.php");
-      }else
-        {
-        echo "<script>alert('La contraseña o el email son incorrectos')</script>";
-        }
-}
 if(isset($_POST["registrar"])){
   header("Location: ./seccion/registrar.php");
 }
+
 ?>
 
 <!doctype html>
@@ -59,17 +41,19 @@ if(isset($_POST["registrar"])){
                         Inicio de Sesión
                     </div>
 
-                    <form method="post">
+                    <form method="post" action="">
+
                     <div class = "form-group">
                     <label>Correo Electronico:</label>
-                    <input type="text" class="form-control" name='CorreoElectronico' placeholder="Ingresa tu correo">
+                    <input type="text" required class="form-control" value="<?php echo $txtCorreoElectronico; ?>"name='CorreoElectronico' placeholder="Ingresa tu correo">
+                    </div>
+
                     <div class="form-group">
-                    <label for="exampleInputPassword1">Contraseña:</label>
-                    <input type="password" class="form-control" name='contraseña' placeholder="Ingresa tu contraseña">
+                    <label >Contraseña:</label>
+                    <input type="password" required class="form-control" value="<?php echo $txtcontraseña; ?>"name='contraseña' placeholder="Ingresa tu contraseña">
+                    </div>
                     <p><input type="submit" name ="iniciar" value="Iniciar Sesión"></p>
                     <p><input type="submit" name ="registrar" value="Registrar Usuario"></p>
-
-                    </div>
                     </form>
                     
                 </div>

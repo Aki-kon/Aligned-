@@ -11,8 +11,8 @@ if(isset($_POST["register"]))
 {
     $usuario=$_POST["usuario"];
     $email=$_POST["email"];
-    $contraseña=md5($_POST["contraseña"]);
-    $password=md5($_POST["password"]);
+    $contraseña=($_POST["contraseña"]);
+    $password=($_POST["password"]);
 
     if($contraseña==$password)
     {
