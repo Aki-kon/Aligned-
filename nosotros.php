@@ -13,7 +13,7 @@
     <div class="card">
         <h2>Alexis Guerra</h2>
         <p class="title">Ingeniero Software - Back end</p>
-        <p>El salvavidas del equipo cuya funcion principal es hacer posible todas las ideas que podamos pensar.</p>
+        <p>El salvavidas del equipo cuya funcion principal es hacer posible todas las ideas que podamos pensaar.</p>
         <p>l20212113@future.com</p>
         <p><button class="button">Contacto</button></p>
       </div>
