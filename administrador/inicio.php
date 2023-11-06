@@ -1,7 +1,7 @@
 <?php include('template/cabecera.php')?>
      <div class="col-md-12">
         <div class="jumbotron">
-            <h1 class="display-3">FUTURE </h1>
+            <h1 class="display-3">ALIGNED </h1>
             <p class="lead">Una forma distinta</p>
             <hr class="my-2">
             <p>More info</p>
