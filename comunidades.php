@@ -10,13 +10,7 @@
     <link href="fontawesome/css/all.min.css" rel="stylesheet" />
     <link href="css/templatemo-comparto.css" rel="stylesheet" />
     <title>Comparto HTML CSS Template</title>
-<!--
 
-Comparto TemplateMo
-
-https://templatemo.com/tm-544-comparto
-
--->
 </head>
 
 <body>
@@ -25,7 +19,7 @@ https://templatemo.com/tm-544-comparto
     <div class="container-fluid">
         <div class="tm-site-header tm-mb-1">
             <div class="tm-site-name-container tm-bg-color-1">
-                <h1 class="tm-text-white">Comparto</h1>
+                <h1 class="tm-text-white">PC GAMING</h1>
             </div>
             <div class="tm-nav-container tm-bg-color-8">
                 <nav class="tm-nav" id="tm-nav">
@@ -33,25 +27,25 @@ https://templatemo.com/tm-544-comparto
                         <li class="tm-nav-item current">
                             <a href="#about" class="tm-nav-link">
                                 <span class="tm-mb-1">.01</span>
-                                <span>About</span>
+                                <span>GENERAL</span>
                             </a>
                         </li>
                         <li class="tm-nav-item">
                             <a href="#services" class="tm-nav-link">
-                                <span class="tm-mb-1">.02</span>
-                                <span>Services</span>
+                            <span class="tm-mb-1">.02</span>
+                                <span>POST</span>
                             </a>
                         </li>
                         <li class="tm-nav-item">
                             <a href="#gallery" class="tm-nav-link">
                                 <span class="tm-mb-1">.03</span>
-                                <span>Gallery</span>
+                                <span>TOP POST</span>
                             </a>
                         </li>
                         <li class="tm-nav-item">
                             <a href="#contact" class="tm-nav-link">
                                 <span class="tm-nav-text tm-mb-1">.04</span>
-                                <span class="tm-nav-text">Contact</span>
+                                <span class="tm-nav-text">CREAR</span>
                             </a>
                         </li>
                     </ul>
@@ -61,15 +55,20 @@ https://templatemo.com/tm-544-comparto
         <section class="tm-mb-1" id="about">
             <div class="tm-row tm-about-row">
                 <div class="tm-section-1-l">
-                    <img src="img/comparto-image-01.jpg" alt="About image" class="tm-img-responsive">
+                    <img src="img/logo_comunidad_pc.jpg" alt="About image" class="tm-img-responsive">
                 </div>
                 <article class="tm-section-1-r tm-bg-color-8">
-                    <h2 class="tm-mb-2 tm-title-color">.01 Comparto CSS Layout</h2>
-                    <p><a rel="nofollow" href="https://templatemo.com/tm-544-comparto" target="_parent">Comparto</a> is a custom light-weight CSS layout for your website. You can easily adapt and use this for your commercial or personal websites. Feel free to use it.</p>
-                    <p>You cannot redistribute this template ZIP file in any template collection website. Please <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> if you have any question.</p>
-                    <p>Nunc sed gravida elit. Curabitur rutrum elit id lobortis viverra. Fusce at libero dui.</p>
-                    
-                    <a href="#services" class="tm-btn tm-btn-1 tm-link-to-services">More Detail</a>
+                    <h2 class="tm-mb-2 tm-title-color">.01 Un poco sobre la comunidad</h2>
+                    <p><strong>PC GAMING</strong></p> 
+
+                    <p>
+                    En PC gaming creamos un espacio en línea dedicado a jugadores de 
+                    computadora que comparten un interés común en los videojuegos. 
+                    Estas comunidad ofrece un lugar donde los jugadores pueden conectarse, interactuar y 
+                    compartir contenido relacionado con los juegos de PC 
+            
+                    </p>
+                   
                 </article>
             </div>
         </section>
