@@ -77,7 +77,7 @@
                 <div class="tm-icon-inner">
                     <a href="#services">
                         <i class="fas fa-synagogue fa-4x tm-mb-1"></i>
-                        <p>Aenean vel est id massa condimentum</p>
+                        <p>INFORMACION Y NOTICIAS SOBRE EL MUNDO DEL GAMING Y LAS PC</p>
                     </a>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                 <div class="tm-icon-inner">
                     <a href="#gallery">
                         <i class="fas fa-chart-bar fa-4x tm-mb-1"></i>
-                        <p>Suspendisse interdum lectus purus</p>
+                        <p>VE LAS PUBLICACIONES QUE ESTAN EN TENDENCIA </p>
                     </a>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                 <div class="tm-icon-inner">
                     <a href="#contact">
                         <i class="fas fa-images fa-4x tm-mb-1"></i>
-                        <p>Nulla ac sodales est vel iaculis purus</p>
+                        <p>SUBE CLIPS, IMAGENES U OPINIONES INTERANTES SOBRE EL GAMING</p>
                     </a>
                 </div>
             </div>
@@ -116,7 +116,7 @@
         </section>
         <section class="tm-bg-color-4 tm-mb-3 tm-gallery-section" id="gallery">
             <div class="tm-gallery-header">
-                <h2 class="tm-mb-1 text-right">.03 The Gallery Section</h2>
+                <h2 class="tm-mb-1 text-right">.03 MEJORES PUBLICACIONES</h2>
                 <ul class="tm-gallery-filter tabs clearfix filters-button-group">
                     <li><a role="button" href="#" class="active" data-filter="*">Show All</a></li>
                     . <li><a role="button" href="#" data-filter=".nature">Nature</a></li>
