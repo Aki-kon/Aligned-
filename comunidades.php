@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
-    <link href="fontawesome/css/all.min.css" rel="stylesheet" />
-    <link href="css/templatemo-comparto.css" rel="stylesheet" />
     <title>Comparto HTML CSS Template</title>
-
 </head>
-
 <body>
+   <p>
+    
+   </p>
+   <p></p>
+   <p></p>
     <!-- Back to top button -->
     <a id="button"><i class="fas fa-angle-up fa-2x"></i></a>
     <div class="container-fluid">
@@ -68,10 +68,10 @@
                     compartir contenido relacionado con los juegos de PC 
             
                     </p>
-                   
                 </article>
             </div>
         </section>
+
         <div class="tm-bg-color-1 tm-mb-1 tm-row tm-social-row">
             <div class="tm-icon">
                 <div class="tm-icon-inner">
@@ -98,153 +98,196 @@
                 </div>
             </div>
         </div>
+
         <section class="tm-mb-1 tm-row tm-services-row" id="services">
-            <div class="tm-section-2-l">
-                <article class="tm-bg-color-6 tm-box-pad tm-mb-1">
-                    <h2 class="tm-mb-2">.02 Aliquam pretium hendrerit</h2>
-                    <p>Cras tempus, velit amet facilisis venenatis, erat felis imperdiet lectus, at posuere elit metus. Title #333 BG #F2F2F2</p>
-                    <p class="tm-mb-0">Nam iaculis, urna ut laoreet aliquam, massa magna dapibus. Text #666</p>
-                </article>
-                <div class="tm-bg-color-7 tm-em-box">
-                    <p class="tm-text-color-2">Nam iaculis, urna ut laoreet aliquam, massa magna dapibus nibh, at pellentesque lectus odio non risus. Nulla ac sodales est, vel iaculis. Text #333 . BG #DDD</p>
-                    <a href="#gallery" class="tm-btn tm-btn-2">Read More</a>
-                </div>
+        <div class="card text-white bg-primary mb-3" style="max-width">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+            <h4 class="card-title">Primary card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="form-group">
+        <label for="exampleTextarea" class="form-label mt-4">Example textarea</label>
+        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
             </div>
-            <div class="tm-section-2-r">
-                <img src="img/comparto-image-02.jpg" alt="Services image" class="tm-img-responsive">
             </div>
+        </div>
+        <button type="button" class="btn btn-primary">Default button</button>
         </section>
+
         <section class="tm-bg-color-4 tm-mb-3 tm-gallery-section" id="gallery">
-            <div class="tm-gallery-header">
-                <h2 class="tm-mb-1 text-right">.03 MEJORES PUBLICACIONES</h2>
-                <ul class="tm-gallery-filter tabs clearfix filters-button-group">
-                    <li><a role="button" href="#" class="active" data-filter="*">Show All</a></li>
-                    . <li><a role="button" href="#" data-filter=".nature">Nature</a></li>
-                    . <li><a role="button" href="#" data-filter=".animals">Animals</a></li>
-                    . <li><a role="button" href="#" data-filter=".people">People</a></li>
-                </ul>
-            </div>
-            <div class="tm-gallery-outer">
-                <div class="tm-gallery" id="tm-gallery">
-                    <div class="tm-gallery-item nature">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-01.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Too <span>CSS</span></h2>
-                                <p>It is a great blog you should explore.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item animals">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-02.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Templates</h2>
-                                <p>best templates come from TemplateMo website.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item nature">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-03.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Web <span>Design</span></h2>
-                                <p>This is our special design work.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item nature">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-04.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Free <span>HTML</span></h2>
-                                <p>HTML layouts are easy to edit.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item animals">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-05.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Just <span>Art</span></h2>
-                                <p>You can create your own art website.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item animals">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-06.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Pro <span>Display</span></h2>
-                                <p>You can make your artwork gallery.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item peopl">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-07.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>The <span>Nature</span></h2>
-                                <p>You can create your own HTML website.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item people">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-08.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Color <span>Art</span></h2>
-                                <p>You can create your own CSS website.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item people">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-09.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Take it <span>easy</span></h2>
-                                <p>You can create your own art gallery.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="tm-gallery-item people">
-                        <figure class="effect-bubba">
-                            <img src="img/gallery/gallery-item-10.jpg" alt="Gallery item" class="tm-img-responsive" />
-                            <figcaption>
-                                <h2>Share <span>This</span></h2>
-                                <p>You can make your own image gallery.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
+        <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">Trending episodes</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-full">
+                                <div class="custom-block-image-wrap">
+                                    <a href="detail-page.html">
+                                        <img src="images/podcast/27376480_7326766.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="custom-block-info">
+                                    <h5 class="mb-2">
+                                        <a href="detail-page.html">
+                                            Vintage Show
+                                        </a>
+                                    </h5>
+
+                                    <div class="profile-block d-flex">
+                                        <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="profile-block-image img-fluid" alt="">
+
+                                        <p>Elsa
+                                            <strong>Influencer</strong></p>
+                                    </div>
+
+                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                        <a href="#" class="bi-headphones me-1">
+                                            <span>100k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-heart me-1">
+                                            <span>2.5k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-chat me-1">
+                                            <span>924k</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="social-share d-flex flex-column ms-auto">
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-heart"></i>
+                                    </a>
+
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-bookmark"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-full">
+                                <div class="custom-block-image-wrap">
+                                    <a href="detail-page.html">
+                                        <img src="images/podcast/27670664_7369753.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="custom-block-info">
+                                    <h5 class="mb-2">
+                                        <a href="detail-page.html">
+                                            Vintage Show
+                                        </a>
+                                    </h5>
+
+                                    <div class="profile-block d-flex">
+                                        <img src="images/profile/cute-smiling-woman-outdoor-portrait.jpg" class="profile-block-image img-fluid" alt="">
+
+                                        <p>
+                                            Taylor
+                                            <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                            <strong>Creator</strong>
+                                        </p>
+                                    </div>
+
+                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                        <a href="#" class="bi-headphones me-1">
+                                            <span>100k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-heart me-1">
+                                            <span>2.5k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-chat me-1">
+                                            <span>924k</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="social-share d-flex flex-column ms-auto">
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-heart"></i>
+                                    </a>
+
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-bookmark"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="custom-block custom-block-full">
+                                <div class="custom-block-image-wrap">
+                                    <a href="detail-page.html">
+                                        <img src="images/podcast/12577967_02.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="custom-block-info">
+                                    <h5 class="mb-2">
+                                        <a href="detail-page.html">
+                                            Daily Talk
+                                        </a>
+                                    </h5>
+
+                                    <div class="profile-block d-flex">
+                                        <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="profile-block-image img-fluid" alt="">
+
+                                        <p>
+                                            William
+                                            <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                            <strong>Vlogger</strong></p>
+                                    </div>
+
+                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                        <a href="#" class="bi-headphones me-1">
+                                            <span>100k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-heart me-1">
+                                            <span>2.5k</span>
+                                        </a>
+                                        <a href="#" class="bi-chat me-1">
+                                            <span>924k</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="social-share d-flex flex-column ms-auto">
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-heart"></i>
+                                    </a>
+
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-bookmark"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </section> <!-- Gallery -->
+            </div>    
+        </section>
         <section id="contact" class="tm-bg-color-5 tm-mb-3">
             <h2 class="tm-text-white tm-contact-title">.04 Contact Us</h2>
             <div class="tm-bg-color-white tm-contact-main">
-                <div class="map-outer">
-                    <div class="gmap-canvas">
-                        <!-- How to change your own map point
-                            1. Go to Google Maps
-                            2. Click on your location point
-                            3. Click "Share" and choose "Embed map" tab
-                            4. Copy only URL and paste it within the src="" field below
-                        -->
-                        <iframe width="100%" height="400" id="gmap-canvas"
-                            src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    </div>
-                </div>
                 <div class="contact-form-outer">
                     <form id="contact-form" action="" method="POST" class="tm-bg-color-6 tm-contact-form">
                         <div class="form-group">
@@ -383,7 +426,5 @@
             });
         });
     </script>
-</body>
+    </body> 
 </html>
-
-<?php include("template/pie.php");?>
