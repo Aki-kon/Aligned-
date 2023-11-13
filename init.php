@@ -1,34 +1,5 @@
 <?php include("template/cabecera.php");?>
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>Pod Talk - Free Bootstrap 5 CSS Template</title>
-
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
-                        
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-
-        <link rel="stylesheet" href="css/bootstrap-icons.css">
-
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-        <link href="css/templatemo-pod-talk.css" rel="stylesheet">
-        
-    </head>
-    
     <body>
 
         <main>
@@ -43,7 +14,7 @@
 
                                 <p class="text-white">Una red social que te ofrece libertad</p>
 
-                                <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Crea tu cuenta</a>
+                                <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Ver</a>
                             </div>
 
                             <div class="owl-carousel owl-theme">
@@ -208,7 +179,7 @@
                 </div>
             </section>
 
-
+            
             <section class="latest-podcast-section section-padding pb-0" id="section_2">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -243,11 +214,9 @@
                                 <div class="custom-block-info">
                                     <div class="custom-block-top d-flex mb-1">
                                         <small class="me-4">
-                                            <i class="bi-clock-fill custom-icon"></i>
+                                            <i class="bi bi-people-fill"></i>
                                             5K Miembros
                                         </small>
-
-                                        <small>Post <span class="badge">15</span></small>
                                     </div>
 
                                     <h5 class="mb-2">
@@ -262,39 +231,12 @@
                                         <p>
                                             Elsa
                                             <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                            <strong>Influencer</strong></p>
+                                            <strong>Founder</strong></p>
                                     </div>
 
                                     <p class="mb-0">Un espacio para ver informacion sobre Musica Moderna y Vintage</p>
-
-                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                        <a href="#" class="bi-headphones me-1">
-                                            <span>120k</span>
-                                        </a>
-
-                                        <a href="#" class="bi-heart me-1">
-                                            <span>42.5k</span>
-                                        </a>
-
-                                        <a href="#" class="bi-chat me-1">
-                                            <span>11k</span>
-                                        </a>
-
-                                        <a href="#" class="bi-download">
-                                            <span>50k</span>
-                                        </a>
-                                    </div>
                                 </div>
 
-                                <div class="d-flex flex-column ms-auto">
-                                    <a href="#" class="badge ms-auto">
-                                        <i class="bi-heart"></i>
-                                    </a>
-
-                                    <a href="#" class="badge ms-auto">
-                                        <i class="bi-bookmark"></i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
 
@@ -304,7 +246,7 @@
                                     <div class="custom-block-icon-wrap">
                                         <div class="section-overlay"></div>
                                         <a href="detail-page.html" class="custom-block-image-wrap">
-                                            <img src="images/podcast/12577967_02.jpg" class="custom-block-image img-fluid" alt="">
+                                            <img src="img/logo_comunidad_pc.jpg" class="custom-block-image img-fluid" alt="">
 
                                             <a href="#" class="custom-block-icon">
                                                 <i class="bi-play-fill"></i>
@@ -314,7 +256,7 @@
 
                                     <div class="mt-2">
                                         <a href="#" class="btn custom-btn">
-                                            Subscribe
+                                            UNIRME
                                         </a>
                                     </div>
                                 </div>
@@ -322,55 +264,26 @@
                                 <div class="custom-block-info">
                                     <div class="custom-block-top d-flex mb-1">
                                         <small class="me-4">
-                                            <i class="bi-clock-fill custom-icon"></i>
-                                            15 Minutes
+                                        <i class="bi bi-people-fill"></i>  
+                                            15k Miembros
                                         </small>
-
-                                        <small>Episode <span class="badge">45</span></small>
                                     </div>
 
                                     <h5 class="mb-2">
                                         <a href="detail-page.html">
-                                            Daily Talk
+                                            PC GAMING
                                         </a>
                                     </h5>
 
                                     <div class="profile-block d-flex">
-                                        <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="profile-block-image img-fluid" alt="">
+                                        <img src="img/avatarr.png" class="profile-block-image img-fluid" alt="">
 
-                                        <p>William
-                                            <strong>Vlogger</strong></p>
+                                        <p>HAB_07
+                                            <strong>Founder</strong></p>
                                     </div>
 
-                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                    <p class="mb-0">Enterate de todo lo relacionado al mundo del Gaming y todas las sorpresas que te aguardan</p>
 
-                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                        <a href="#" class="bi-headphones me-1">
-                                            <span>140k</span>
-                                        </a>
-
-                                        <a href="#" class="bi-heart me-1">
-                                            <span>22.4k</span>
-                                        </a>
-
-                                        <a href="#" class="bi-chat me-1">
-                                            <span>16k</span>
-                                        </a>
-
-                                        <a href="#" class="bi-download">
-                                            <span>62k</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-column ms-auto">
-                                    <a href="#" class="badge ms-auto">
-                                        <i class="bi-heart"></i>
-                                    </a>
-
-                                    <a href="#" class="badge ms-auto">
-                                        <i class="bi-bookmark"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -386,24 +299,24 @@
 
                         <div class="col-lg-12 col-12">
                             <div class="section-title-wrap mb-5">
-                                <h4 class="section-title">Topicos</h4>
+                                <h4 class="section-title">Categorias</h4>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="custom-block custom-block-overlay">
                                 <a href="detail-page.html" class="custom-block-image-wrap">
-                                    <img src="images/topics/physician-consulting-his-patient-clinic.jpg" class="custom-block-image img-fluid" alt="">
+                                    <img src="img/comicss.jpg" class="custom-block-image img-fluid" alt="">
                                 </a>
 
                                 <div class="custom-block-info custom-block-overlay-info">
                                     <h5 class="mb-1">
                                         <a href="listing-page.html">
-                                            Negocios
+                                            Comics
                                         </a>
                                     </h5>
 
-                                    <p class="badge mb-0">50 Episodes</p>
+                                    <p class="badge mb-0">500 comunidades</p>
                                 </div>
                             </div>
                         </div>
@@ -411,17 +324,17 @@
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="custom-block custom-block-overlay">
                                 <a href="detail-page.html" class="custom-block-image-wrap">
-                                    <img src="images/topics/repairman-doing-air-conditioner-service.jpg" class="custom-block-image img-fluid" alt="">
+                                    <img src="img/game_zone.webp" class="custom-block-image img-fluid" alt="">
                                 </a>
 
                                 <div class="custom-block-info custom-block-overlay-info">
                                     <h5 class="mb-1">
                                         <a href="listing-page.html">
-                                            Trabajos
+                                            Gaming
                                         </a>
                                     </h5>
 
-                                    <p class="badge mb-0">12 Episodes</p>
+                                    <p class="badge mb-0">1200 Comunidades</p>
                                 </div>
                             </div>
                         </div>
@@ -429,17 +342,17 @@
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="custom-block custom-block-overlay">
                                 <a href="detail-page.html" class="custom-block-image-wrap">
-                                    <img src="images/topics/woman-practicing-yoga-mat-home.jpg" class="custom-block-image img-fluid" alt="">
+                                    <img src="img/funny.webp" class="custom-block-image img-fluid" alt="">
                                 </a>
 
                                 <div class="custom-block-info custom-block-overlay-info">
                                     <h5 class="mb-1">
                                         <a href="listing-page.html">
-                                            Meditacion 
+                                            Funny Clips 
                                         </a>
                                     </h5>
 
-                                    <p class="badge mb-0">35 Episodes</p>
+                                    <p class="badge mb-0">350 Comunidades</p>
                                 </div>
                             </div>
                         </div>
@@ -453,11 +366,11 @@
                                 <div class="custom-block-info custom-block-overlay-info">
                                     <h5 class="mb-1">
                                         <a href="listing-page.html">
-                                            Comida
+                                            Comida y restaurantes
                                         </a>
                                     </h5>
 
-                                    <p class="badge mb-0">12 Episodes</p>
+                                    <p class="badge mb-0">140 Comunidades</p>
                                 </div>
                             </div>
                         </div>
@@ -579,7 +492,12 @@
             </section>
         
         </main>    
-    
+      <!-- JAVASCRIPT FILES -->
+      <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+
     
     </body>
-</html>
+
