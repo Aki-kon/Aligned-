@@ -1,723 +1,585 @@
-<?php 
-session_start();
-
-if(isset($_SESSION['usuario'])){
-  header("Location: panel.php");
-}
-include("template/cabecera.php");
-?>
-<!DOCTYPE html>
+<?php include("template/cabecera.php");?>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-<link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!------------------LIght BOx for Gallery-------------->
-<link rel="stylesheet" href="lightbox.min.css">
-<script type="text/javascript" src="lightbox-plus-jquery.min.js"></script>
-<!------------------LIght BOx for Gallery-------------->
-<title>Application-1</title>
-</head>
-<body>
+        <meta name="description" content="">
+        <meta name="author" content="">
 
+        <title>Pod Talk - Free Bootstrap 5 CSS Template</title>
 
-    <!-------------------------------NAvigation Starts------------------>
-
-
-    <!---------------------------------------------Ends navigation------------------------------>
-
-    <!---------------------------MOdal Section  satrts------------------->
-
-    <div class="modal fade" id="modalview">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-
-            <div class="modal-content">
-
-
-                <div class="modal-header">
-                    <div class="modal-title h4">Messages</div>
-
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-
-                <div class="modal-body">
-
-
-                    <ul class="list-unstyled">
-
-
-                     <a href="#" class="text-decoration-none">
-                        <li class="media hover-media">
-                           
-                                <img src="img/avatar-dhg.png" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
-
-                                <div class="media-body text-dark">
-                                        <h6 class="media-header">Jchob Thunder and <strong> 1 others</strong></h6>
-                                        <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                </div>
-
-                        </li>
-                    </a>
-                    <hr class="my-3">
-
-
-                    
-                    <a href="#" class="text-decoration-none">
-                            <li class="media hover-media">
-                               
-                                    <img src="img/avatar-fat.jpg" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
-    
-                                    <div class="media-body text-dark">
-                                            <h6 class="media-header">Mark Otto and <strong> 3 others</strong></h6>
-                                            <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    
-                                    </div>
-    
-                            </li>
-                        </a>
-
-
-                        <hr class="my-3">
-
-
-                        <a href="#" class="text-decoration-none">
-                            <li class="media hover-media">
-                               
-                                    <img src="img/avatar-mdo.png" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
-    
-                                    <div class="media-body text-dark">
-                                            <h6 class="media-header">Archer andu and <strong> 5 others</strong></h6>
-                                            <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    
-                                    </div>
-    
-                            </li>
-                        </a>
-
-                        <hr class="my-3">
-
-
-                        <a href="#" class="text-decoration-none">
-                                <li class="media hover-media">
-                                   
-                                        <img src="img/avatar-dhg.png" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         
-                                        <div class="media-body text-dark">
-                                                <h6 class="media-header">Jchob Thunder and <strong> 1 others</strong></h6>
-                                                <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        
-                                        </div>
-        
-                                </li>
-                            </a>
-                            <hr class="my-3">
-        
-        
-                            
-                            <a href="#" class="text-decoration-none">
-                                    <li class="media hover-media">
-                                       
-                                            <img src="img/avatar-fat.jpg" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
-            
-                                            <div class="media-body text-dark">
-                                                    <h6 class="media-header">Mark Otto and <strong> 3 others</strong></h6>
-                                                    <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            
-                                            </div>
-            
-                                    </li>
-                                </a>
-        
-        
-                                <hr class="my-3">
-        
-        
-                                <a href="#" class="text-decoration-none">
-                                    <li class="media hover-media">
-                                       
-                                            <img src="img/avatar-mdo.png" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
-            
-                                            <div class="media-body text-dark">
-                                                    <h6 class="media-header">Archer andu and <strong> 5 others</strong></h6>
-                                                    <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            
-                                            </div>
-            
-                                    </li>
-                                </a>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
                         
-                                <hr class="my-3">
-                                <a href="#" class="text-decoration-none">
-                                        <li class="media hover-media">
-                                           
-                                                <img src="img/avatar-dhg.png" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
-                
-                                                <div class="media-body text-dark">
-                                                        <h6 class="media-header">Jchob Thunder and <strong> 1 others</strong></h6>
-                                                        <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                
-                                                </div>
-                
-                                        </li>
-                                    </a>
-                                    <hr class="my-3">
-                
-                
-                                    
-                                    <a href="#" class="text-decoration-none">
-                                            <li class="media hover-media">
-                                               
-                                                    <img src="img/avatar-fat.jpg" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
-                    
-                                                    <div class="media-body text-dark">
-                                                            <h6 class="media-header">Mark Otto and <strong> 3 others</strong></h6>
-                                                            <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    
-                                                    </div>
-                    
-                                            </li>
-                                        </a>
-                
-                
-                                        <hr class="my-3">
-                
-                
-                                        <a href="#" class="text-decoration-none">
-                                            <li class="media hover-media">
-                                               
-                                                    <img src="img/avatar-mdo.png" alt="img" width="60px" height="60px" class="rounded-circle mr-3">
-                    
-                                                    <div class="media-body text-dark">
-                                                            <h6 class="media-header">Archer andu and <strong> 5 others</strong></h6>
-                                                            <p class="media-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    
-                                                    </div>
-                    
-                                            </li>
-                                        </a>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+        <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+        
+    </head>
     
-    
+    <body>
 
+        <main>
 
-                    </ul>
+            <section class="hero-section">
+                <div class="container">
+                    <div class="row">
 
+                        <div class="col-lg-12 col-12">
+                            <div class="text-center mb-5 pb-2">
+                                <h1 class="text-white">ALIGNED</h1>
 
+                                <p class="text-white">Una red social que te ofrece libertad</p>
 
-                    
-
-                </div>
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-    <!-------------------------------MOdal Ends---------------------------->
-
-
-
-    <!-------------------------------------------Start Grids layout for lg-xl-3 columns and (xs-lg 1 columns)--------------------------------->
-
-
-    <div class="container">
-        <div class="row">
-
-
-            <!--------------------------left columns  start-->
-
-            <div class="col-12 col-lg-3">
-
-                <div class="left-column">
-
-
-                    <div class="card card-left1 mb-4" >
-                        <img src="img/photo-1455448972184-de647495d428.jpg" alt="" class="card-img-top img-fluid">
-                        <div class="card-body text-center ">
-                            <img src="img/avatar-dhg.png" alt="img" width="120px" height="120px" class="rounded-circle mt-n5">
-                            <h5 class="card-title">Dave Gamache</h5>
-                            <p class="card-text text-justify mb-2">I wish i was a little bit taller, wish i was a baller, wish i had a girl… also.</p>
-                            <ul class="list-unstyled nav justify-content-center">
-                               <a href="#" class="text-dark text-decoration-none"> <li class="nav-item">Friends <br> <strong>12M</strong></li></a>
-                              <a href="#" class="text-dark text-decoration-none"> <li class="nav-item">Enimes <br> <strong>1</strong></li></a> 
-                            </ul>
-
-                        </div>
-
-
-
-
-                    </div>
-
-
-                    <div class="card shadow-sm card-left2 mb-4">
-
-                        <div class="card-body">
-
-                                <h5 class="mb-3 card-title">About <small><a href="#" class="ml-1">Edit</a></small></h5>
-
-                                <p class="card-text"> <i class="fas fa-calendar-week mr-2"></i> Went to <a href="#" class="text-decoration-none">oh canada</a></p>
-
-                                <p class="card-text"> <i class="fas fa-user-friends mr-2"></i> Become a friend with <a href="#" class="text-decoration-none">obama</a></p>
-                                <p class="card-text"> <i class="far fa-building mr-2"></i> Work at <a href="#" class="text-decoration-none">Github</a></p>
-                                <p class="card-text"> <i class="fas fa-home mr-2"></i> Live in <a href="#" class="text-decoration-none">San francisco</a></p>
-                                <p class="card-text"> <i class="fas fa-map-marker mr-2"></i> From <a href="#" class="text-decoration-none">Seattle, WA</a></p>
-
-
-
-
-                        </div>
-                     
-
-
-
-
-                    </div>
-
-
-
-
-                    <div class="card shadow-sm card-left3 mb-4">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Photos<small class="ml-2"><a href="#">.Edit </a></small></h5>
-
-                            <div class="row">
-                                <div class="col-6 p-1">
-                                    <a href="img/left1.jpg" data-lightbox="id" ><img src="img/left1.jpg" alt="img" class="img-fluid my-2"></a>  
-                                    <a href="img/left2.jpg"data-lightbox="id"><img src="img/left2.jpg" alt="img" class="img-fluid my-2"></a>
-                                    <a href="img/left3.jpg"data-lightbox="id"><img src="img/left3.jpg" alt="img" class="img-fluid my-2"></a>
-
-                                </div>
-
-
-                                <div class="col-6 p-1">
-                                        <a href="img/left4.jpg"data-lightbox="id"><img src="img/left4.jpg" alt="img" class="img-fluid my-2"></a>
-                                        <a href="img/left5.jpg"data-lightbox="id"><img src="img/left5.jpg" alt="img" class="img-fluid my-2"></a>
-                                        <a href="img/left6.jpg"data-lightbox="id"><img src="img/left6.jpg" alt="img" class="img-fluid my-2"></a>
-    
-                                    </div>
-
+                                <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Crea tu cuenta</a>
                             </div>
 
-                        </div>
+                            <div class="owl-carousel owl-theme">
+                                <div class="owl-carousel-info-wrap item">
+                                    <img src="images/profile/smiling-business-woman-with-folded-hands-against-white-wall-toothy-smile-crossed-arms.jpg" class="owl-carousel-image img-fluid" alt="">
 
+                                    <div class="owl-carousel-info">
+                                        <h4 class="mb-2">
+                                            Candice
+                                            <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                                        </h4>
 
+                                        <span class="badge">Storytelling</span>
 
+                                        <span class="badge">Business</span>
+                                    </div>
 
+                                    <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                            </li>
 
-
-
-                        </div>
-
-
-
-
-                   
-
-                    
-
-
-
-
-
-                </div>
-
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-
- <!--------------------------Ends Left columns-->
-
-
-
-
-
- <!---------------------------------------Middle columns  start---------------->
-
-
-
-            
-            <div class="col-12 col-lg-6" >
-
-
-                <div class="middle-column">
-
-
-                    <div class="card" >
-
-
-                        <div class="card-header bg-transparent">
-                            <form class="form-inline">
-
-
-                                <div class="input-group w-100">
-                                 <input type="text" name="message" id="message" placeholder="Message" class="form-control form-control-md">
-
-                                 <div class="input-group-append">
-                                        <div class="input-group-text">
-                                                <i class="fas fa-camera"></i>
-                                            </div>
-
-
-                                 </div>
-
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
 
+                                <div class="owl-carousel-info-wrap item">
+                                    <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="owl-carousel-image img-fluid" alt="">
 
+                                    <div class="owl-carousel-info">
+                                        <h4 class="mb-2">
+                                            William
+                                            <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                                        </h4>
 
-                        
-                                
-                               
-                            </form>
+                                        <span class="badge">Creative</span>
 
+                                        <span class="badge">Design</span>
+                                    </div>
+
+                                    <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-pinterest"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="owl-carousel-info-wrap item">
+                                    <img src="images/profile/cute-smiling-woman-outdoor-portrait.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                                    <div class="owl-carousel-info">
+                                        <h4 class="mb-2">Taylor</h4>
+
+                                        <span class="badge">Modeling</span>
+
+                                        <span class="badge">Fashion</span>
+                                    </div>
+
+                                    <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-pinterest"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="owl-carousel-info-wrap item">
+                                    <img src="images/profile/man-portrait.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                                    <div class="owl-carousel-info">
+                                        <h4 class="mb-2">Nick</h4>
+
+                                        <span class="badge">Acting</span>
+                                    </div>
+
+                                    <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-instagram"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-youtube"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="owl-carousel-info-wrap item">
+                                    <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                                    <div class="owl-carousel-info">
+                                        <h4 class="mb-2">
+                                            Elsa
+                                            <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                                        </h4>
+
+                                        <span class="badge">Influencer</span>
+                                    </div>
+
+                                    <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-instagram"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-youtube"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="owl-carousel-info-wrap item">
+                                    <img src="images/profile/smart-attractive-asian-glasses-male-standing-smile-with-freshness-joyful-casual-blue-shirt-portrait-white-background.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                                    <div class="owl-carousel-info">
+                                        <h4 class="mb-2">Chan</h4>
+
+                                        <span class="badge">Education</span>
+                                    </div>
+
+                                    <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-linkedin"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-
-
-
-
-
-                           
-   <div class="card-body">
-
-    <div class="media">
-        <img src="img/avatar-dhg.png" alt="img" width="55px" height="55px" class="rounded-circle mr-3">
-
-        <div class="media-body">
-            <h5>Dave Gamache</h5>
-            <p class="card-text text-justify">Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
-           
-
-            <div class="row no-gutters mb-3">
-                <div class="col-6 p-1 text-center">
-
-                        <img src="img/adventure-alps-clouds-2259810.jpg" alt="" class="img-fluid mb-2">
-                        <img src="img/aerial-view-architectural-design-buildings-2228123.jpg" alt="" class="img-fluid">
-            
-
+                    </div>
                 </div>
+            </section>
 
-                <div class="col-6 p-1 text-center">
 
-                        <img src="img/celebration-colored-smoke-dark-2297472.jpg" alt="" class="img-fluid mb-2">
-                        <img src="img/bodybuilding-exercise-fitness-2294361.jpg" alt=""class="img-fluid">
-            
+            <section class="latest-podcast-section section-padding pb-0" id="section_2">
+                <div class="container">
+                    <div class="row justify-content-center">
 
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">UNETE A LA COMUNIDAD QUE QUIERAS</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block d-flex">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap">
+                                        <div class="section-overlay"></div>
+                                        <a href="detail-page.html" class="custom-block-image-wrap">
+                                            <img src="images/podcast/11683425_4790593.jpg" class="custom-block-image img-fluid" alt="">
+
+                                            <a href="#" class="custom-block-icon">
+                                                <i class="bi-play-fill"></i>
+                                            </a>
+                                        </a>
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <a href="#" class="btn custom-btn">
+                                            UNIRME 
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info">
+                                    <div class="custom-block-top d-flex mb-1">
+                                        <small class="me-4">
+                                            <i class="bi-clock-fill custom-icon"></i>
+                                            5K Miembros
+                                        </small>
+
+                                        <small>Post <span class="badge">15</span></small>
+                                    </div>
+
+                                    <h5 class="mb-2">
+                                        <a href="detail-page.html">
+                                            Modern Vintage
+                                        </a>
+                                    </h5>
+
+                                    <div class="profile-block d-flex">
+                                        <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="profile-block-image img-fluid" alt="">
+
+                                        <p>
+                                            Elsa
+                                            <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                            <strong>Influencer</strong></p>
+                                    </div>
+
+                                    <p class="mb-0">Un espacio para ver informacion sobre Musica Moderna y Vintage</p>
+
+                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                        <a href="#" class="bi-headphones me-1">
+                                            <span>120k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-heart me-1">
+                                            <span>42.5k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-chat me-1">
+                                            <span>11k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-download">
+                                            <span>50k</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-column ms-auto">
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-heart"></i>
+                                    </a>
+
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-bookmark"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="custom-block d-flex">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap">
+                                        <div class="section-overlay"></div>
+                                        <a href="detail-page.html" class="custom-block-image-wrap">
+                                            <img src="images/podcast/12577967_02.jpg" class="custom-block-image img-fluid" alt="">
+
+                                            <a href="#" class="custom-block-icon">
+                                                <i class="bi-play-fill"></i>
+                                            </a>
+                                        </a>
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <a href="#" class="btn custom-btn">
+                                            Subscribe
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info">
+                                    <div class="custom-block-top d-flex mb-1">
+                                        <small class="me-4">
+                                            <i class="bi-clock-fill custom-icon"></i>
+                                            15 Minutes
+                                        </small>
+
+                                        <small>Episode <span class="badge">45</span></small>
+                                    </div>
+
+                                    <h5 class="mb-2">
+                                        <a href="detail-page.html">
+                                            Daily Talk
+                                        </a>
+                                    </h5>
+
+                                    <div class="profile-block d-flex">
+                                        <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="profile-block-image img-fluid" alt="">
+
+                                        <p>William
+                                            <strong>Vlogger</strong></p>
+                                    </div>
+
+                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                        <a href="#" class="bi-headphones me-1">
+                                            <span>140k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-heart me-1">
+                                            <span>22.4k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-chat me-1">
+                                            <span>16k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-download">
+                                            <span>62k</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-column ms-auto">
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-heart"></i>
+                                    </a>
+
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-bookmark"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+            </section>
 
 
-            </div>
+            <section class="topics-section section-padding pb-0" id="section_3">
+                <div class="container">
+                    <div class="row">
 
-
-
-
-
-
-
-
-        
-            <div class="media mb-3">
-                    <img src="img/avatar-dhg.png" alt="img" width="45px" height="45px" class="rounded-circle mr-2">
-                    <div class="media-body">
-                            <p class="card-text text-justify">Jacon Thornton: Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.</p>
-
-                    </div>
-
-
-            </div>
-
-            
-            <div class="media">
-                    <img src="img/avatar-mdo.png" alt="img" width="45px" height="45px" class="rounded-circle mr-2">
-                    <div class="media-body">
-                            <p class="card-text text-justify">Mark Otto: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-                    </div>
-
-
-            </div>
-
-            
-            
-
-
-
-        </div>
-        <small>5min</small>
-        
-
-
-    </div>
-
-
-    
-
-
-
-   </div>
-
-                            
-                             
- <hr>
-
-<div class="card-body">
-
-    <div class="media">
-            <img src="img/avatar-fat.jpg" alt="img" width="55px" height="55px" class="rounded-circle mr-3">
-
-        <div class="media-body">
-                <h5>Jacob Thornton</h5>
-                <p class="text-justify">Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-
-
-        </div>
-
-        <small>14 min</small>
-
-    </div>
-
-
-
-
-
-</div>
-<hr>
-
-<div class="card-body">
-
-    <div class="media">
-
-            <img src="img/avatar-mdo.png" alt="img" width="55px" height="55px" class="rounded-circle mr-3">
-            <div class="media-body">
-                <h5>Mark Otto</h5>
-                <p class="text-justify">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-             <a href="img/mid5.jpg" data-lightbox="id"><img src="img/mid5.jpg" alt="" class="img-fluid shadow-sm img-thumbnail">   </a>   
-
-            </div>
-
-
-            <small class="text-muted">10 min</small>
-
-
-
-    </div>
-
-
-
-
-</div>
-
-
-
-
-
-                     
-                           
-
- </div>
-
-
-
-
-
-
-
-
-
- </div>
-
-
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  <br> <br> <br><br> <br> <br>
-
-<!------------------------Middle column Ends---------------->
-
-
-
-
-
-
-
-
-<!---------------------------Statrs Right Columns----------------->
-
-
-                
-<div class="col-12 col-lg-3">
-
-
-    <div class="right-column">
-
-        <div class="card shadow-sm mb-4" >
-            <div class="card-body">
-                <h6 class="card-title">Sponsored</h6>
-                <img src="img/right1.jpg" alt="card-img" class="card-img mb-3">
-                <p class="card-text text-justify"> <span class="h6">It might be time to visit Iceland.</span> Iceland is so chill, and everything looks cool here. Also, we heard the people are pretty nice.  What are you waiting for?</p>
-                <a href="#" class="btn btn-outline-info card-link btn-sm">Buy a ticket</a>
-
-
-            </div>
-
-        </div>
-
-
-        <div class="card shadow-sm mb-4">
-
-            <div class="card-body">
-
-                    <h6 class="card-title ">Likes <a href="#" class="ml-1"><small>.View All</small> </a> </h6>
-                    <div class="row no-gutters d-none d-lg-flex">
-                        <div class="col-6 p-1">
-                                <img src="img/avatar-dhg.png" alt="img" width="80px" height="80px" class="rounded-circle mb-4">
-                                <img src="img/avatar-fat.jpg" alt="img" width="80px" height="80px" class="rounded-circle">
-
-
-
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">Topicos</h4>
+                            </div>
                         </div>
-                        <div class="col-6 p-1 text-left">
-                            <h6>Jacob Thornton @fat</h6>
-                            <a href="#" class="btn btn-outline-info btn-sm mb-3"><i class="fas fa-user-friends"></i>Follow </a>
 
-                            <h6>Mark otto</h6>
-                            <a href="#" class="btn btn-outline-info  btn-sm"><i class="fas fa-user-friends"></i>Follow </a>
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-overlay">
+                                <a href="detail-page.html" class="custom-block-image-wrap">
+                                    <img src="images/topics/physician-consulting-his-patient-clinic.jpg" class="custom-block-image img-fluid" alt="">
+                                </a>
 
+                                <div class="custom-block-info custom-block-overlay-info">
+                                    <h5 class="mb-1">
+                                        <a href="listing-page.html">
+                                            Negocios
+                                        </a>
+                                    </h5>
+
+                                    <p class="badge mb-0">50 Episodes</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-overlay">
+                                <a href="detail-page.html" class="custom-block-image-wrap">
+                                    <img src="images/topics/repairman-doing-air-conditioner-service.jpg" class="custom-block-image img-fluid" alt="">
+                                </a>
+
+                                <div class="custom-block-info custom-block-overlay-info">
+                                    <h5 class="mb-1">
+                                        <a href="listing-page.html">
+                                            Trabajos
+                                        </a>
+                                    </h5>
+
+                                    <p class="badge mb-0">12 Episodes</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-overlay">
+                                <a href="detail-page.html" class="custom-block-image-wrap">
+                                    <img src="images/topics/woman-practicing-yoga-mat-home.jpg" class="custom-block-image img-fluid" alt="">
+                                </a>
+
+                                <div class="custom-block-info custom-block-overlay-info">
+                                    <h5 class="mb-1">
+                                        <a href="listing-page.html">
+                                            Meditacion 
+                                        </a>
+                                    </h5>
+
+                                    <p class="badge mb-0">35 Episodes</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-overlay">
+                                <a href="detail-page.html" class="custom-block-image-wrap">
+                                    <img src="images/topics/delicious-meal-with-sambal-arrangement.jpg" class="custom-block-image img-fluid" alt="">
+                                </a>
+
+                                <div class="custom-block-info custom-block-overlay-info">
+                                    <h5 class="mb-1">
+                                        <a href="listing-page.html">
+                                            Comida
+                                        </a>
+                                    </h5>
+
+                                    <p class="badge mb-0">12 Episodes</p>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
-
-            </div>
-
-            <div class="card-footer">
-
-                <p class="lead" style="font-size:18px;">Dave really likes these nerds, no one knows why though.</p>
-            </div>
-            
+                </div>
+            </section>
 
 
-        </div>
-
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <p>&copy; 2018 Bootstrap
-
-
-
-                        <a href="#">About</a>
-                        <a href="#">Help</a>
-                        <a href="#">Terms</a>
-                        <a href="#">Privacy</a>
-                        <a href="#">Cookies</a>
-                        <a href="#">Ads </a>
-                        <a href="#">Info</a>
-                        <a href="#">Brand</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Status</a>
-                        <a href="#">Apps</a>
-                        <a href="#">Jobs</a>
-                        <a href="#">Advertise</a>
-                    
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                </p>
-            </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
+            <section class="trending-podcast-section section-padding">
+            <h1>Seccion de Posts</h1>
+    <div>
+        <input type="text" id="username" placeholder="Nombre de usuario">
+        <textarea id="post-content" placeholder="¿Qué estás pensando?"></textarea>
+        <button onclick="publicar()">Publicar algo</button>
+    </div>
+    <div id="publicaciones">
+        <!-- Aquí se mostrarán las publicaciones -->
     </div>
 
+    <script>
+        function publicar() {
+            var username = document.getElementById("username").value;
+            var contenido = document.getElementById("post-content").value;
 
-            </div>
+            if (username.trim() === "" || contenido.trim() === "") {
+                alert("Debes ingresar un nombre de usuario y contenido antes de publicar.");
+                return;
+            }
 
+            var publicacion = {
+                username: username,
+                contenido: contenido,
+                likes: 0,
+                comentarios: []
+            };
 
-</div>
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            publicaciones.push(publicacion);
+            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
 
+            mostrarPublicaciones();
+            document.getElementById("post-content").value = "";
+        }
 
+        function mostrarPublicaciones() {
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            var publicacionesContainer = document.getElementById("publicaciones");
+            publicacionesContainer.innerHTML = "";
 
-<!------------------------Light BOx OPtions------------->
-<script>
-        lightbox.option({
-          
-        })
+            publicaciones.forEach(function (publicacion, index) {
+                var publicacionDiv = document.createElement("div");
+                publicacionDiv.className = "publicacion";
+                publicacionDiv.innerHTML = `
+                    <p><strong>${publicacion.username}</strong> - ${publicacion.contenido}</p>
+                    <button onclick="darLike(${index})">Like (${publicacion.likes})</button>
+                    <button onclick="mostrarComentarios(${index})">Comentarios</button>
+                    <div class="comentarios" id="comentarios-${index}"></div>
+                    <input type="text" id="comentario-input-${index}" placeholder="Añadir un comentario">
+                    <button onclick="agregarComentario(${index})">Publicar Comentario</button>
+                `;
+
+                publicacionesContainer.appendChild(publicacionDiv);
+            });
+        }
+
+        function darLike(index) {
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            publicaciones[index].likes++;
+            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
+            mostrarPublicaciones();
+        }
+
+        function mostrarComentarios(index) {
+            var comentariosContainer = document.getElementById(`comentarios-${index}`);
+            comentariosContainer.innerHTML = "";
+
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            publicaciones[index].comentarios.forEach(function (comentario) {
+                var comentarioDiv = document.createElement("div");
+                comentarioDiv.className = "comentario";
+                comentarioDiv.textContent = comentario;
+                comentariosContainer.appendChild(comentarioDiv);
+            });
+        }
+
+        function agregarComentario(index) {
+            var comentarioInput = document.getElementById(`comentario-input-${index}`);
+            var comentario = comentarioInput.value;
+
+            if (comentario.trim() === "") {
+                alert("Debes ingresar un comentario antes de publicar.");
+                return;
+            }
+
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            publicaciones[index].comentarios.push(comentario);
+            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
+            mostrarComentarios(index);
+            comentarioInput.value = "";
+        }
+        mostrarPublicaciones();
     </script>
 
+    <style>
+        .publicacion {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
 
-
-<!------------------------Light BOx OPtions------------->
-
-
-
-
-
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
+        .comentario {
+            margin-top: 5px;
+            padding: 5px;
+            background-color: #f0f0f0;
+        }
+    </style>
+            </section>
+        
+        </main>    
+    
+    
+    </body>
 </html>
-<?php include("template/pie.php");?>

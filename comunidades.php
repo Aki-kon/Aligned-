@@ -43,7 +43,7 @@
                             </a>
                         </li>
                         <li class="tm-nav-item">
-                            <a href="#contact" class="tm-nav-link">
+                            <a href="#create" class="tm-nav-link">
                                 <span class="tm-nav-text tm-mb-1">.04</span>
                                 <span class="tm-nav-text">CREAR</span>
                             </a>
@@ -91,7 +91,7 @@
             </div>
             <div class="tm-icon">
                 <div class="tm-icon-inner">
-                    <a href="#contact">
+                    <a href="#services">
                         <i class="fas fa-images fa-4x tm-mb-1"></i>
                         <p>SUBE CLIPS, IMAGENES U OPINIONES INTERANTES SOBRE EL GAMING</p>
                     </a>
@@ -100,27 +100,132 @@
         </div>
 
         <section class="tm-mb-1 tm-row tm-services-row" id="services">
-        <div class="card text-white bg-primary mb-3" style="max-width">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-            <h4 class="card-title">Primary card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="form-group">
-        <label for="exampleTextarea" class="form-label mt-4">Example textarea</label>
-        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-            </div>
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary">Default button</button>
-        </section>
+            <div> 
+            <head>
+    <title>Publicación al estilo de Facebook</title>
+</head>
+<body>
+    <h1>Publicación al estilo de Facebook</h1>
+    <div>
+        <input type="text" id="username" placeholder="Nombre de usuario">
+        <textarea id="post-content" placeholder="¿Qué estás pensando?"></textarea>
+        <button onclick="publicar()">Publicar</button>
+    </div>
+    <div id="publicaciones">
+        <!-- Aquí se mostrarán las publicaciones -->
+    </div>
 
+    <script>
+        function publicar() {
+            var username = document.getElementById("username").value;
+            var contenido = document.getElementById("post-content").value;
+
+            if (username.trim() === "" || contenido.trim() === "") {
+                alert("Debes ingresar un nombre de usuario y contenido antes de publicar.");
+                return;
+            }
+
+            var publicacion = {
+                username: username,
+                contenido: contenido,
+                likes: 0,
+                comentarios: []
+            };
+
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            publicaciones.push(publicacion);
+            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
+
+            mostrarPublicaciones();
+            document.getElementById("post-content").value = "";
+        }
+
+        function mostrarPublicaciones() {
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            var publicacionesContainer = document.getElementById("publicaciones");
+            publicacionesContainer.innerHTML = "";
+
+            publicaciones.forEach(function (publicacion, index) {
+                var publicacionDiv = document.createElement("div");
+                publicacionDiv.className = "publicacion";
+                publicacionDiv.innerHTML = `
+                    <p><strong>${publicacion.username}</strong> - ${publicacion.contenido}</p>
+                    <button onclick="darLike(${index})">Like (${publicacion.likes})</button>
+                    <button onclick="mostrarComentarios(${index})">Comentarios</button>
+                    <div class="comentarios" id="comentarios-${index}"></div>
+                    <input type="text" id="comentario-input-${index}" placeholder="Añadir un comentario">
+                    <button onclick="agregarComentario(${index})">Publicar Comentario</button>
+                `;
+
+                publicacionesContainer.appendChild(publicacionDiv);
+            });
+        }
+
+        function darLike(index) {
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            publicaciones[index].likes++;
+            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
+            mostrarPublicaciones();
+        }
+
+        function mostrarComentarios(index) {
+            var comentariosContainer = document.getElementById(`comentarios-${index}`);
+            comentariosContainer.innerHTML = "";
+
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            publicaciones[index].comentarios.forEach(function (comentario) {
+                var comentarioDiv = document.createElement("div");
+                comentarioDiv.className = "comentario";
+                comentarioDiv.textContent = comentario;
+                comentariosContainer.appendChild(comentarioDiv);
+            });
+        }
+
+        function agregarComentario(index) {
+            var comentarioInput = document.getElementById(`comentario-input-${index}`);
+            var comentario = comentarioInput.value;
+
+            if (comentario.trim() === "") {
+                alert("Debes ingresar un comentario antes de publicar.");
+                return;
+            }
+
+            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
+            publicaciones[index].comentarios.push(comentario);
+            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
+            mostrarComentarios(index);
+            comentarioInput.value = "";
+        }
+
+        mostrarPublicaciones();
+    </script>
+
+    <style>
+        .publicacion {
+            border: 1px solid #ccc;
+            padding: 70px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+
+        .comentario {
+            margin-top: 5px;
+            padding: 80px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</body>
+
+            </div>
+
+        </section>
         <section class="tm-bg-color-4 tm-mb-3 tm-gallery-section" id="gallery">
         <div class="container">
                     <div class="row">
 
                         <div class="col-lg-12 col-12">
                             <div class="section-title-wrap mb-5">
-                                <h4 class="section-title">Trending episodes</h4>
+                                <h4 class="section-title">PUBLICACIONES EN TENDENCIA</h4>
                             </div>
                         </div>
 
@@ -128,37 +233,36 @@
                             <div class="custom-block custom-block-full">
                                 <div class="custom-block-image-wrap">
                                     <a href="detail-page.html">
-                                        <img src="images/podcast/27376480_7326766.jpg" class="custom-block-image img-fluid" alt="">
+                                        <img src="img/jarrados.png" class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
 
                                 <div class="custom-block-info">
                                     <h5 class="mb-2">
                                         <a href="detail-page.html">
-                                            Vintage Show
+                                            Nuevo Descubrimiento 
                                         </a>
                                     </h5>
 
                                     <div class="profile-block d-flex">
                                         <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="profile-block-image img-fluid" alt="">
 
-                                        <p>Elsa
-                                            <strong>Influencer</strong></p>
+                                        <p>AcamoDev1
+                                            <strong>Chief</strong></p>
                                     </div>
 
-                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                    <p class="mb-0">Chicos les recomiendo que le den una visita al canal de Jarod's Tech si les interesa 
+                                        saber mas sobre el mundo de las laptop gaming 
+                                    </p>
 
                                     <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                        <a href="#" class="bi-headphones me-1">
-                                            <span>100k</span>
-                                        </a>
 
                                         <a href="#" class="bi-heart me-1">
-                                            <span>2.5k</span>
+                                            <span>3.5k</span>
                                         </a>
 
                                         <a href="#" class="bi-chat me-1">
-                                            <span>924k</span>
+                                            <span>1k</span>
                                         </a>
                                     </div>
                                 </div>
@@ -179,14 +283,14 @@
                             <div class="custom-block custom-block-full">
                                 <div class="custom-block-image-wrap">
                                     <a href="detail-page.html">
-                                        <img src="images/podcast/27670664_7369753.jpg" class="custom-block-image img-fluid" alt="">
+                                        <img src="img/explo.jpeg" class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
 
                                 <div class="custom-block-info">
                                     <h5 class="mb-2">
                                         <a href="detail-page.html">
-                                            Vintage Show
+                                            No te lo podras creer
                                         </a>
                                     </h5>
 
@@ -194,25 +298,24 @@
                                         <img src="images/profile/cute-smiling-woman-outdoor-portrait.jpg" class="profile-block-image img-fluid" alt="">
 
                                         <p>
-                                            Taylor
+                                            Zombie Man 
                                             <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                            <strong>Creator</strong>
+                                            <strong>Recruit</strong>
                                         </p>
                                     </div>
 
-                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                    <p class="mb-0">Lo que le paso a este chico es una anectoda que jamas dejara de contar
+                                        durante toda su vida. Simplemente epico
+                                    </p>
 
                                     <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                        <a href="#" class="bi-headphones me-1">
-                                            <span>100k</span>
-                                        </a>
 
                                         <a href="#" class="bi-heart me-1">
-                                            <span>2.5k</span>
+                                            <span>12.5k</span>
                                         </a>
 
                                         <a href="#" class="bi-chat me-1">
-                                            <span>924k</span>
+                                            <span>3.2k</span>
                                         </a>
                                     </div>
                                 </div>
@@ -233,14 +336,14 @@
                             <div class="custom-block custom-block-full">
                                 <div class="custom-block-image-wrap">
                                     <a href="detail-page.html">
-                                        <img src="images/podcast/12577967_02.jpg" class="custom-block-image img-fluid" alt="">
+                                        <img src="img/setup.webp" class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
 
                                 <div class="custom-block-info">
                                     <h5 class="mb-2">
                                         <a href="detail-page.html">
-                                            Daily Talk
+                                            SetUp De La Semana
                                         </a>
                                     </h5>
 
@@ -248,23 +351,20 @@
                                         <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="profile-block-image img-fluid" alt="">
 
                                         <p>
-                                            William
+                                            Robot Cop
                                             <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                            <strong>Vlogger</strong></p>
+                                            <strong>General</strong></p>
                                     </div>
 
-                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                    <p class="mb-0">Les presento mi nuevo SetUp chicos, no podran creer lo que me costo esta locura</p>
 
                                     <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                        <a href="#" class="bi-headphones me-1">
-                                            <span>100k</span>
+                                        <a href="#" class="bi-heart me-1">
+                                            <span>9000</span>
                                         </a>
 
-                                        <a href="#" class="bi-heart me-1">
-                                            <span>2.5k</span>
-                                        </a>
                                         <a href="#" class="bi-chat me-1">
-                                            <span>924k</span>
+                                            <span>4500</span>
                                         </a>
                                     </div>
                                 </div>
@@ -285,38 +385,58 @@
                 </div>
             </div>    
         </section>
-        <section id="contact" class="tm-bg-color-5 tm-mb-3">
-            <h2 class="tm-text-white tm-contact-title">.04 Contact Us</h2>
-            <div class="tm-bg-color-white tm-contact-main">
-                <div class="contact-form-outer">
-                    <form id="contact-form" action="" method="POST" class="tm-bg-color-6 tm-contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Name" required="" />
+        <section class="contact-section section-padding pt-0" id= create>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">CREA TU PROPIA COMUNIDAD</h4>
+                            </div>
+
+                            <form action="#" method="post" class="custom-form contact-form" role="form">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="full-name" id="full-name" class="form-control" placeholder="Full Name" required="">
+                                            
+                                            <label for="floatingInput">Nombre de la Comunidad</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12"> 
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+                                            
+                                            <label for="floatingInput">Correo del dueño de la comunidad</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="company" id="name" class="form-control" placeholder="Name" required="">
+                                            
+                                            <label for="floatingInput">Tipo de comunidad</label>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Describe message here"></textarea>
+                                            
+                                            <label for="floatingTextarea">Describe un poco de que se va tratar</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-12 ms-auto">
+                                        <button type="submit" class="form-control">Crear</button>
+                                    </div>
+
+                                </div>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required="" />
-                        </div>
-                        <div class="form-group">
-                            <textarea rows="4" name="message" class="form-control" placeholder="Message..."
-                                required=""></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="ml-auto tm-btn tm-btn-3">
-                                Send
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="contact-info-outer">
-                    <div class="tm-bg-color-6 contact-info">
-                        <p>Pellentesque egestas odio sed tellus dictum, vel lobortis ante vehicula.</p>
-                        <p>Morbi eget accumsan libero, non tincidunt felis.</p>
-                        <p class="tm-mb-0">Tel: <a href="tel:0100200990">010-020-0990</a></p>
-                        <p>Email: <a href="mailto:info@company.com">info@company.com</a></p>
+
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         <div class="tm-mb-4 text-center tm-social-s">
             <a href="https://fb.com/templatemo" class="tm-social-link"><i class="fab fa-facebook tm-social-icon"></i></a>
             <a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>
