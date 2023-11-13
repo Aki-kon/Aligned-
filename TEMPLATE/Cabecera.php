@@ -17,7 +17,7 @@
     <link href="fontawesome/css/all.min.css" rel="stylesheet" />
     <link href="css/templatemo-comparto.css" rel="stylesheet" />
 </head>
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg bg-dark">
                 <div class="container">
                     <a class="navbar-brand me-lg-5 me-0" href="index.html">
                         <img src="img/Aligned_logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
