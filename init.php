@@ -379,117 +379,104 @@
                 </div>
             </section>
 
-
-            <section class="trending-podcast-section section-padding">
-            <h1>Seccion de Posts</h1>
-    <div>
-        <input type="text" id="username" placeholder="Nombre de usuario">
-        <textarea id="post-content" placeholder="¿Qué estás pensando?"></textarea>
-        <button onclick="publicar()">Publicar algo</button>
-    </div>
-    <div id="publicaciones">
-        <!-- Aquí se mostrarán las publicaciones -->
-    </div>
-
-    <script>
-        function publicar() {
-            var username = document.getElementById("username").value;
-            var contenido = document.getElementById("post-content").value;
-
-            if (username.trim() === "" || contenido.trim() === "") {
-                alert("Debes ingresar un nombre de usuario y contenido antes de publicar.");
-                return;
+            <section style="background-color:#F5F5F5">
+            <div>
+            <label for="username">Usuario: </label>
+            <input type="text" id="username" placeholder="Ingrese su usuario">
+        </div>
+        
+        <div>
+            <label for="postInput">Publicar:</label>
+            <input type="text" id="postInput" placeholder="Escribe tu publicación">
+            <button onclick="publishPost()">Publicar</button>
+        </div>
+        
+        <div id="posts-container"></div>
+        
+        <script>
+            let currentUser = '';
+            const postsData = [];
+        
+            function renderPosts() {
+                const postsContainer = document.getElementById('posts-container');
+                postsContainer.innerHTML = '';
+        
+                postsData.forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.classList.add('post');
+                    postElement.innerHTML = `
+                        <p>${post.username}: ${post.content}</p>
+                        <button class="like-btn" onclick="likePost(${post.id})">Me gusta <span id="likes-count-${post.id}">${post.likes}</span></button>
+                        <button onclick="deletePost(${post.id})">Eliminar publicación</button>
+                        <div>
+                            <input type="text" id="commentInput-${post.id}" placeholder="Escribe un comentario">
+                            <button onclick="addComment(${post.id})">Comentar</button>
+                        </div>
+                        <div id="comments-${post.id}">
+                            ${renderComments(post.comments)}
+                        </div>
+                    `;
+                    postsContainer.appendChild(postElement);
+                });
             }
-
-            var publicacion = {
-                username: username,
-                contenido: contenido,
-                likes: 0,
-                comentarios: []
-            };
-
-            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
-            publicaciones.push(publicacion);
-            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
-
-            mostrarPublicaciones();
-            document.getElementById("post-content").value = "";
-        }
-
-        function mostrarPublicaciones() {
-            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
-            var publicacionesContainer = document.getElementById("publicaciones");
-            publicacionesContainer.innerHTML = "";
-
-            publicaciones.forEach(function (publicacion, index) {
-                var publicacionDiv = document.createElement("div");
-                publicacionDiv.className = "publicacion";
-                publicacionDiv.innerHTML = `
-                    <p><strong>${publicacion.username}</strong> - ${publicacion.contenido}</p>
-                    <button onclick="darLike(${index})">Like (${publicacion.likes})</button>
-                    <button onclick="mostrarComentarios(${index})">Comentarios</button>
-                    <div class="comentarios" id="comentarios-${index}"></div>
-                    <input type="text" id="comentario-input-${index}" placeholder="Añadir un comentario">
-                    <button onclick="agregarComentario(${index})">Publicar Comentario</button>
-                `;
-
-                publicacionesContainer.appendChild(publicacionDiv);
-            });
-        }
-
-        function darLike(index) {
-            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
-            publicaciones[index].likes++;
-            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
-            mostrarPublicaciones();
-        }
-
-        function mostrarComentarios(index) {
-            var comentariosContainer = document.getElementById(`comentarios-${index}`);
-            comentariosContainer.innerHTML = "";
-
-            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
-            publicaciones[index].comentarios.forEach(function (comentario) {
-                var comentarioDiv = document.createElement("div");
-                comentarioDiv.className = "comentario";
-                comentarioDiv.textContent = comentario;
-                comentariosContainer.appendChild(comentarioDiv);
-            });
-        }
-
-        function agregarComentario(index) {
-            var comentarioInput = document.getElementById(`comentario-input-${index}`);
-            var comentario = comentarioInput.value;
-
-            if (comentario.trim() === "") {
-                alert("Debes ingresar un comentario antes de publicar.");
-                return;
+        
+            function renderComments(comments) {
+                return comments.map(comment => `<p>${comment.username}: ${comment.text}</p>`).join('');
             }
-
-            var publicaciones = JSON.parse(localStorage.getItem("publicaciones")) || [];
-            publicaciones[index].comentarios.push(comentario);
-            localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
-            mostrarComentarios(index);
-            comentarioInput.value = "";
-        }
-        mostrarPublicaciones();
-    </script>
-
-    <style>
-        .publicacion {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #fff;
-        }
-
-        .comentario {
-            margin-top: 5px;
-            padding: 5px;
-            background-color: #f0f0f0;
-        }
-    </style>
+        
+            function publishPost() {
+                const postInput = document.getElementById('postInput');
+                const postContent = postInput.value.trim();
+        
+                if (currentUser && postContent !== '') {
+                    const newPost = {
+                        id: postsData.length + 1,
+                        username: currentUser,
+                        content: postContent,
+                        likes: 0,
+                        comments: []
+                    };
+        
+                    postsData.push(newPost);
+                    renderPosts();
+                    postInput.value = '';
+                }
+            }
+        
+            function likePost(postId) {
+                const post = postsData.find(post => post.id === postId);
+                post.likes += 1;
+                document.getElementById(`likes-count-${postId}`).innerText = post.likes;
+            }
+        
+            function deletePost(postId) {
+                postsData.splice(postsData.findIndex(post => post.id === postId), 1);
+                renderPosts();
+            }
+        
+            function addComment(postId) {
+                const commentInput = document.getElementById(`commentInput-${postId}`);
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const post = postsData.find(post => post.id === postId);
+                    post.comments.push({ username: currentUser, text: commentText });
+                    renderPosts();
+                    commentInput.value = '';
+                }
+            }
+        
+            function setUserName() {
+                const usernameInput = document.getElementById('username');
+                currentUser = usernameInput.value.trim();
+            }
+        
+            document.getElementById('username').addEventListener('change', setUserName);
+        
+            renderPosts();
+        </script>
             </section>
+
         
         </main>    
       <!-- JAVASCRIPT FILES -->
